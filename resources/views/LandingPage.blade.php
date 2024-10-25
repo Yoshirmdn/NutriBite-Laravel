@@ -1,77 +1,122 @@
 <x-layout>
-    <!-- Hero Section -->
-    <section class="bg-white py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-gray-800">Snack Sehat untuk Semua</h2>
-            <p class="mt-4 text-gray-600">Pilihan snack yang aman dan lezat untuk mereka yang memiliki alergi, dengan
-                komposisi alami dan terukur kalori.</p>
-            <a href="#products" class="mt-6 inline-block bg-green-500 text-white py-3 px-8 rounded-full shadow-lg">Temukan
-                Snack
-                Anda</a>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-gray-800">Mengapa Nutribite?</h2>
-            <p class="mt-4 text-gray-600">Kami menyediakan snack yang diformulasikan khusus untuk membantu mereka yang
-                memiliki alergi. Produk kami bebas dari bahan pengawet dan pewarna buatan.</p>
+    <main class="text-center p-6 bg-amber-700">
+        <h1 class="text-5xl font-bold mb-4">
+            Good Juice for Good Moments
+        </h1>
+        <p class="text-lg mb-8">
+            Drinking juice can be beneficial for your health as it allows your body to absorb nutrients quickly
+            without
+            having to digest fibers and other components in whole foods
+        </p>
+        <div class="relative inline-block">
+            <img alt="Juice Burst Orange &amp; Carrot Bottle" class="mx-auto" height="600"
+                src="https://storage.googleapis.com/a1aa/image/kUrW3JqPZkJ6JxFo11ksQbMJZmQrpwVlRo5FUJfOrS7BiA1JA.jpg"
+                width="400" />
+            <div class="absolute top-0 left-0">
+                <img alt="Person drinking juice" class="rounded-full" height="100"
+                    src="https://storage.googleapis.com/a1aa/image/9o3GpoYxt0LCO1QF1pV5k3YfAkrvnrpwqi9B4gLlfhpHEBqTA.jpg"
+                    width="100" />
+                <i class="fas fa-arrow-right text-2xl">
+                </i>
+            </div>
         </div>
-    </section>
-
-    <!-- Product Section -->
-    <section id="products" class="py-20 bg-white">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-800">Pilihan Snack</h2>
-            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Snack 1 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-gray-800">Nutribite Crunch</h3>
-                    <p class="mt-4 text-gray-600">Snack bebas gluten yang aman untuk mereka dengan alergi gandum.</p>
-                    <ul class="mt-4">
-                        <li><strong>Komposisi:</strong> Oat, Kacang Almond, Madu</li>
-                        <li><strong>Kalori:</strong> 120 kcal per porsi</li>
-                    </ul>
+        <div class="flex justify-center space-x-8 mt-8">
+            <div>
+                <img alt="Juice glass with fruits" height="100"
+                    src="https://storage.googleapis.com/a1aa/image/hlyXTG5Pla42ANGULSP72O8Vv4EBoTTu6eZRNin9zV3CiA1JA.jpg"
+                    width="100" />
+                <p>
+                    Testy in-Ever
+                </p>
+            </div>
+            <div>
+                <img alt="Smoothie glass with fruits" height="100"
+                    src="https://storage.googleapis.com/a1aa/image/uqtSMXPygKaaAFSjGM9FazwajZzHwTmkGO4c67HD3zACRg6E.jpg"
+                    width="100" />
+                <p>
+                    Health Sip
+                </p>
+            </div>
+        </div>
+    </main>
+    <section class="p-6">
+        <h2 class="text-4xl font-bold mb-6">
+            Popular products
+        </h2>
+        <div class="grid grid-cols-3 gap-6">
+            <div class="bg-white p-4 rounded shadow">
+                <img alt="Juice Burst Orange 500ml" class="mx-auto mb-4" height="300"
+                    src="https://storage.googleapis.com/a1aa/image/JkwHWix0Nk7qHtT97xz0ftdQ2ASiNwspYQHSF4vCUHXFiA1JA.jpg"
+                    width="200" />
+                <h3 class="text-xl font-bold">
+                    JUICE BURST ORANGE 500ML
+                </h3>
+                <p class="text-lg">
+                    £15.00
+                </p>
+                <div class="flex justify-center space-x-2">
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
                 </div>
-                <!-- Snack 2 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-gray-800">Nutribite Fruit Bar</h3>
-                    <p class="mt-4 text-gray-600">Terbuat dari buah-buahan kering, bebas dari produk susu dan
-                        kacang-kacangan.</p>
-                    <ul class="mt-4">
-                        <li><strong>Komposisi:</strong> Kurma, Aprikot, Kismis</li>
-                        <li><strong>Kalori:</strong> 90 kcal per porsi</li>
-                    </ul>
+            </div>
+            <div class="bg-white p-4 rounded shadow relative">
+                <img alt="Juice Burst Orange 500ml" class="mx-auto mb-4" height="300"
+                    src="https://storage.googleapis.com/a1aa/image/JkwHWix0Nk7qHtT97xz0ftdQ2ASiNwspYQHSF4vCUHXFiA1JA.jpg"
+                    width="200" />
+                <h3 class="text-xl font-bold">
+                    JUICE BURST ORANGE 500ML
+                </h3>
+                <p class="text-lg">
+                    £15.00
+                </p>
+                <div class="flex justify-center space-x-2">
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
                 </div>
-                <!-- Snack 3 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-gray-800">Nutribite Protein Bites</h3>
-                    <p class="mt-4 text-gray-600">Camilan tinggi protein yang aman bagi penderita alergi kedelai.</p>
-                    <ul class="mt-4">
-                        <li><strong>Komposisi:</strong> Kacang Polong, Cokelat Hitam, Chia Seeds</li>
-                        <li><strong>Kalori:</strong> 150 kcal per porsi</li>
-                    </ul>
+                <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 rounded">
+                    Sold Out
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <img alt="Juice Burst Orange 500ml" class="mx-auto mb-4" height="300"
+                    src="https://storage.googleapis.com/a1aa/image/JkwHWix0Nk7qHtT97xz0ftdQ2ASiNwspYQHSF4vCUHXFiA1JA.jpg"
+                    width="200" />
+                <h3 class="text-xl font-bold">
+                    JUICE BURST ORANGE 500ML
+                </h3>
+                <p class="text-lg">
+                    £15.00
+                </p>
+                <div class="flex justify-center space-x-2">
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
+                    <i class="fas fa-star text-yellow-500">
+                    </i>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold text-gray-800">Hubungi Kami</h2>
-            <p class="mt-4 text-gray-600">Jika Anda memiliki pertanyaan tentang produk kami atau alergi, jangan ragu
-                untuk menghubungi kami.</p>
-            <a href="mailto:info@nutribite.com"
-                class="mt-6 inline-block bg-green-500 text-white py-3 px-8 rounded-full shadow-lg">Email Kami</a>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-green-500 py-6">
-        <div class="container mx-auto text-center text-white">
-            <p>&copy; 2024 Nutribite. Semua Hak Dilindungi.</p>
-        </div>
-    </footer>
 </x-layout>
