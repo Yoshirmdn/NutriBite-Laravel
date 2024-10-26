@@ -33,7 +33,7 @@
                 </button>
             </div>
         </header>
-        <nav id="mobile-menu" class="hidden md:hidden flex flex-col items-center mt-4 space-y-2">
+        <nav id="mobile-menu" class="hidden md:hidden flex-col items-center mt-4 space-y-2">
             <a class="block px-4 py-2 rounded" href="#">Home</a>
             <a class="block px-4 py-2 rounded" href="#">About</a>
             <a class="block px-4 py-2 rounded" href="#">Products</a>
