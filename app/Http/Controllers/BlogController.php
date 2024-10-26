@@ -12,7 +12,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $blogs = Blog::all();
+        return view('blogs.index', compact('blogs'));
     }
 
     /**
@@ -20,7 +21,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('blogs.create');
     }
 
     /**
@@ -28,7 +29,17 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'thumbnail' => 'required',
+            'author' => 'required',
+        ]);
+
+        Blog::create($request->all());
+
+        return redirect()->route('blogs.index')
+            ->with('success', 'Blog created successfully.');
     }
 
     /**
@@ -36,7 +47,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        return view('blogs.show', compact('blog'));
     }
 
     /**
@@ -44,7 +55,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('blogs.edit', compact('blog'));
     }
 
     /**
@@ -52,7 +63,17 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'thumbnail' => 'required',
+            'author' => 'required',
+        ]);
+
+        $blog->update($request->all());
+
+        return redirect()->route('blogs.index')
+            ->with('success', 'Blog updated successfully');
     }
 
     /**
@@ -60,6 +81,9 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        $blog->delete();
+
+        return redirect()->route('blogs.index')
+            ->with('success', 'Blog deleted successfully');
     }
 }
