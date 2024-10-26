@@ -10,13 +10,18 @@
     <!-- Gunakan md:rounded-full untuk tampilan desktop saja -->
     <div class="glass-effect md:rounded-full px-6 py-2 w-full max-w-4xl">
         <header class="flex justify-between items-center">
-            <div class="text-lg font-semibold text-gray-700">Brand</div>
+            <div class="text-lg font-semibold text-gray-700">NutriBite</div>
             <nav class="hidden md:flex space-x-6">
-                <a class="btn-custom px-4 py-2 rounded" href="#">Home</a>
-                <a class="btn-custom px-4 py-2 rounded" href="#">About</a>
-                <a class="btn-custom px-4 py-2 rounded" href="#">Products</a>
-                <a class="btn-custom px-4 py-2 rounded" href="#">Shop</a>
-                <a class="btn-custom px-4 py-2 rounded" href="#">Featured</a>
+                <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
+                    href="#">Home</a>
+                <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
+                    href="#">About</a>
+                <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
+                    href="#">Products</a>
+                <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
+                    href="#">Blog</a>
+                <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
+                    href="#">Administrator</a>
             </nav>
             <div class="md:hidden">
                 <button id="menu-toggle" class="text-gray-700 focus:outline-none">
