@@ -1,122 +1,108 @@
 <x-layout>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FDECE4;
+        }
 
-    <main class="text-center p-6 bg-amber-700">
-        <h1 class="text-5xl font-bold mb-4">
-            Good Juice for Good Moments
-        </h1>
-        <p class="text-lg mb-8">
-            Drinking juice can be beneficial for your health as it allows your body to absorb nutrients quickly
-            without
-            having to digest fibers and other components in whole foods
-        </p>
-        <div class="relative inline-block">
-            <img alt="Juice Burst Orange &amp; Carrot Bottle" class="mx-auto" height="600"
-                src="https://storage.googleapis.com/a1aa/image/kUrW3JqPZkJ6JxFo11ksQbMJZmQrpwVlRo5FUJfOrS7BiA1JA.jpg"
-                width="400" />
-            <div class="absolute top-0 left-0">
-                <img alt="Person drinking juice" class="rounded-full" height="100"
-                    src="https://storage.googleapis.com/a1aa/image/9o3GpoYxt0LCO1QF1pV5k3YfAkrvnrpwqi9B4gLlfhpHEBqTA.jpg"
-                    width="100" />
-                <i class="fas fa-arrow-right text-2xl">
-                </i>
+        .title {
+            font-family: 'Fredoka One', cursive;
+            font-size: 3rem;
+            color: #3A1A1A;
+        }
+
+        .subtitle {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.5rem;
+            color: #3A1A1A;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #3A1A1A;
+        }
+    </style>
+    <main class="text-center p-6">
+        <section class="" id="Hero">
+            <div class="text-center mt-14">
+                <h1 class="title">
+                    Nutribite: Smart Snacks for Every Moment
+                </h1>
             </div>
-        </div>
-        <div class="flex justify-center space-x-8 mt-8">
-            <div>
-                <img alt="Juice glass with fruits" height="100"
-                    src="https://storage.googleapis.com/a1aa/image/hlyXTG5Pla42ANGULSP72O8Vv4EBoTTu6eZRNin9zV3CiA1JA.jpg"
-                    width="100" />
-                <p>
-                    Testy in-Ever
-                </p>
+            <div class="flex justify-center mt-8 relative">
+                <div class="w-1/3 flex flex-col items-center">
+                    <img src="{{ asset('assets/image/Snacks.jpg') }}" alt="Person holding a snack"
+                        class="rounded-full mb-4 aspect-square w-40 h-40" />
+                    <p class="description text-center">
+                        Choosing the right snack can fuel your body and mind, helping you stay energized and focused
+                        throughout the day. Learn how smart snacking supports a balanced lifestyle.
+                    </p>
+                    {{-- <i class="fas fa-arrow-right text-2xl mt-4"></i> --}}
+                </div>
+                <div class="w-1/4 flex justify-center items-center rotate-12">
+                    <img src="{{ asset('assets/image/Lays.png') }}" alt="Nutribite Snack Package"
+                        class="relative z-10" />
+                </div>
+                <div class="w-1/3 flex flex-col items-center">
+                    <div class="flex items-center mb-4">
+                        <img src="{{ asset('assets/image/Fitbars.jpg') }}" alt="Snack Types"
+                            class="rounded-full aspect-square w-40 h-40" />
+                        {{-- <i class="fas fa-arrow-right text-2xl ml-4"></i> --}}
+                    </div>
+                    <p class="subtitle text-center">
+                        Discover Diverse Flavors
+                    </p>
+                    <p class="description text-center">
+                        Explore a variety of snacks, each crafted to provide essential nutrients and fit seamlessly into
+                        your daily routine.
+                    </p>
+                </div>
             </div>
-            <div>
-                <img alt="Smoothie glass with fruits" height="100"
-                    src="https://storage.googleapis.com/a1aa/image/uqtSMXPygKaaAFSjGM9FazwajZzHwTmkGO4c67HD3zACRg6E.jpg"
-                    width="100" />
-                <p>
-                    Health Sip
-                </p>
+        </section>
+        <section class="mt-8" id="About">
+            <div class="text-center">
+                <h2 class="title">
+                    About Nutribite
+                </h2>
             </div>
-        </div>
+            <div class="flex justify-center mt-8">
+                <div class="w-1/3 flex
+                    flex-col items-center">
+                    <img src="{{ asset('assets/image/HealthySnacks.jpg') }}" alt="Healthy Snacks"
+                        class="rounded-full mb-4 aspect-square w-40 h-40" />
+                    <p class="subtitle text-center">
+                        Healthy Snacks
+                    </p>
+                    <p class="description text-center">
+                        Our snacks are made from high-quality ingredients, ensuring that you get the nutrients you need
+                        without compromising on taste.
+                    </p>
+                </div>
+                <div class="w-1/3 flex
+                    flex-col items-center">
+                    <img src="{{ asset('assets/image/LocalIngredients.jpg') }}" alt="Local Ingredients"
+                        class="rounded-full mb-4 aspect-square w-40 h-40" />
+                    <p class="subtitle text-center">
+                        Local Ingredients
+                    </p>
+                    <p class="description text-center">
+                        We source our ingredients from local farmers, supporting the community and ensuring that our
+                        snacks are fresh and sustainable.
+                    </p>
+                </div>
+                <div class="w-1/3 flex
+                    flex-col items-center">
+                    <img src="{{ asset('assets/image/NoPreservatives.jpg') }}" alt="No Preservatives"
+                        class="rounded-full mb-4 aspect-square w-40 h-40" />
+                    <p class="subtitle text-center">
+                        No Preservatives
+                    </p>
+                    <p class="description text-center">
+                        Our snacks are free from artificial preservatives, additives, and colors, making them a healthy
+                        choice for you and your family.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
-    <section class="p-6">
-        <h2 class="text-4xl font-bold mb-6">
-            Popular products
-        </h2>
-        <div class="grid grid-cols-3 gap-6">
-            <div class="bg-white p-4 rounded shadow">
-                <img alt="Juice Burst Orange 500ml" class="mx-auto mb-4" height="300"
-                    src="https://storage.googleapis.com/a1aa/image/JkwHWix0Nk7qHtT97xz0ftdQ2ASiNwspYQHSF4vCUHXFiA1JA.jpg"
-                    width="200" />
-                <h3 class="text-xl font-bold">
-                    JUICE BURST ORANGE 500ML
-                </h3>
-                <p class="text-lg">
-                    £15.00
-                </p>
-                <div class="flex justify-center space-x-2">
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                </div>
-            </div>
-            <div class="bg-white p-4 rounded shadow relative">
-                <img alt="Juice Burst Orange 500ml" class="mx-auto mb-4" height="300"
-                    src="https://storage.googleapis.com/a1aa/image/JkwHWix0Nk7qHtT97xz0ftdQ2ASiNwspYQHSF4vCUHXFiA1JA.jpg"
-                    width="200" />
-                <h3 class="text-xl font-bold">
-                    JUICE BURST ORANGE 500ML
-                </h3>
-                <p class="text-lg">
-                    £15.00
-                </p>
-                <div class="flex justify-center space-x-2">
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                </div>
-                <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 rounded">
-                    Sold Out
-                </div>
-            </div>
-            <div class="bg-white p-4 rounded shadow">
-                <img alt="Juice Burst Orange 500ml" class="mx-auto mb-4" height="300"
-                    src="https://storage.googleapis.com/a1aa/image/JkwHWix0Nk7qHtT97xz0ftdQ2ASiNwspYQHSF4vCUHXFiA1JA.jpg"
-                    width="200" />
-                <h3 class="text-xl font-bold">
-                    JUICE BURST ORANGE 500ML
-                </h3>
-                <p class="text-lg">
-                    £15.00
-                </p>
-                <div class="flex justify-center space-x-2">
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                </div>
-            </div>
-        </div>
-    </section>
 </x-layout>
