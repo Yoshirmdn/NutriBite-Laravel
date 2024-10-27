@@ -1,3 +1,42 @@
-<div>
-    <!-- If you do not have a consistent goal in life, you can not live it in a consistent way. - Marcus Aurelius -->
+<style>
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+</style>
+<div class="fixed w-full z-10 flex justify-center py-4">
+    <!-- Gunakan md:rounded-full untuk tampilan desktop saja -->
+    <div class="glass-effect md:rounded-full px-6 py-2 w-full max-w-4xl">
+        <header class="flex justify-between items-center">
+            <div class="text-lg font-semibold text-gray-700">NutriBite</div>
+            <nav class="hidden md:flex space-x-6">
+                <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
+                    href="/products">Product</a>
+                <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
+                    href="/blogs">Blog</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <nav id="mobile-menu" class="hidden md:hidden flex-col items-center mt-4 space-y-2">
+            <a class="block px-4 py-2 rounded" href="/product">Product</a>
+            <a class="block px-4 py-2 rounded" href="/blog">Blog</a>
+        </nav>
+    </div>
 </div>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
