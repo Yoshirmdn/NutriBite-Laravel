@@ -59,7 +59,7 @@
                 </div>
             </div>
         </section>
-        <section class="mt-8" id="About">
+        <section class="mt-8" id="about">
             <div class="text-center">
                 <h2 class="title">
                     About Nutribite
