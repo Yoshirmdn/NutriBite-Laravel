@@ -13,15 +13,15 @@
             <div class="text-lg font-semibold text-gray-700">NutriBite</div>
             <nav class="hidden md:flex space-x-6">
                 <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
-                    href="#">Home</a>
+                    href="#home">Home</a>
                 <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
-                    href="#">About</a>
+                    href="#about">About</a>
                 <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
-                    href="#">Products</a>
+                    href="#products">Products</a>
                 <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
-                    href="#">Blog</a>
+                    href="#blog">Blog</a>
                 <a class="btn-custom px-4 py-2 rounded text-amber-950 font-semibold hover:text-opacity-70"
-                    href="#">Administrator</a>
+                    href="/auth">Administrator</a>
             </nav>
             <div class="md:hidden">
                 <button id="menu-toggle" class="text-gray-700 focus:outline-none">
@@ -34,11 +34,11 @@
             </div>
         </header>
         <nav id="mobile-menu" class="hidden md:hidden flex-col items-center mt-4 space-y-2">
-            <a class="block px-4 py-2 rounded" href="#">Home</a>
-            <a class="block px-4 py-2 rounded" href="#">About</a>
-            <a class="block px-4 py-2 rounded" href="#">Products</a>
-            <a class="block px-4 py-2 rounded" href="#">Shop</a>
-            <a class="block px-4 py-2 rounded" href="#">Featured</a>
+            <a class="block px-4 py-2 rounded" href="#home">Home</a>
+            <a class="block px-4 py-2 rounded" href="#about">About</a>
+            <a class="block px-4 py-2 rounded" href="#products">Products</a>
+            <a class="block px-4 py-2 rounded" href="#blog">Blog</a>
+            <a class="block px-4 py-2 rounded" href="/auth">Administrator</a>
         </nav>
     </div>
 </div>
