@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Contracts\View\View;
 
 class ProductController extends Controller
 {
@@ -32,13 +33,25 @@ class ProductController extends Controller
     {
         $request->validate([
             'product_code' => 'required',
-            'image' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'name' => 'required',
             'description' => 'required',
-            'allergies' => 'required',
+            'allergies' => 'required|array',
+            'allergies.*' => 'string',
         ]);
 
-        Product::create($request->all());
+        // Handle the image upload
+        $imagePath = $request->file('image')->store('public/images');
+        $imageUrl = Storage::url($imagePath);
+
+        // Create a new product with the image path
+        Product::create([
+            'product_code' => $request->product_code,
+            'image' => $imageUrl,
+            'name' => $request->name,
+            'description' => $request->description,
+            'allergies' => json_encode($request->allergies),
+        ]);
 
         return redirect()->route('products.index')
             ->with('success', 'Product created successfully.');
@@ -67,13 +80,31 @@ class ProductController extends Controller
     {
         $request->validate([
             'product_code' => 'required',
-            'image' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'name' => 'required',
             'description' => 'required',
-            'allergies' => 'required',
+            'allergies' => 'required|array',
+            'allergies.*' => 'string',
         ]);
 
-        $product->update($request->all());
+        // Handle image upload if a new image is provided
+        if ($request->hasFile('image')) {
+            // Delete the old image if it exists
+            if ($product->image) {
+                Storage::delete(str_replace('/storage', 'public', $product->image));
+            }
+
+            $imagePath = $request->file('image')->store('public/images');
+            $product->image = Storage::url($imagePath);
+        }
+
+        // Update other fields
+        $product->update([
+            'product_code' => $request->product_code,
+            'name' => $request->name,
+            'description' => $request->description,
+            'allergies' => json_encode($request->allergies),
+        ]);
 
         return redirect()->route('products.index')
             ->with('success', 'Product updated successfully');
@@ -84,6 +115,10 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
+        if ($product->image) {
+            Storage::delete(str_replace('/storage', 'public', $product->image));
+        }
+
         $product->delete();
 
         return redirect()->route('products.index')

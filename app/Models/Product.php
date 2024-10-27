@@ -13,9 +13,10 @@ class Product extends Model
         'image',
         'name',
         'description',
-        'allergies'
+        'allergies',
     ];
+
     protected $casts = [
-        'allergies' => 'array'
+        'allergies' => 'array',
     ];
 }
