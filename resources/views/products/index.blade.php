@@ -31,8 +31,8 @@
                                 @endforeach
                             </td>
                             <td class="border border-gray-300 px-4 py-2">
-                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
-                                    class="w-20 h-20 object-cover rounded-md" />
+                                <img src="{{ $product->image }}" alt="{{ $product->name }}"
+                                    class="w-20 h-20 object-cover">
                             </td>
                             <td class="border border-gray-300 px-4 py-2">
                                 <a href="{{ route('products.edit', $product->id) }}"
